@@ -1,4 +1,4 @@
-# Personal-Website-Imtiaz.me
+# Personal-Website-TechLead.io
 It's my portfolio website which showcase my previous works and projects !
 
 Remember that This Website is my portfolio website. Which means that it will contain some Software Engineering projects. !
