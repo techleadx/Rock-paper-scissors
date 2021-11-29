@@ -5,4 +5,4 @@ Remember that This Website is my portfolio website. Which means that it will con
 Though this site is a private repository, I will keep my all Software Engineering projects in public repositories !
 
 And another thing is Using a .io domain can be a good way to identify yourself or your business as part of the Tech scene as you are a TechLead.
-You know, Ideas are Cheap, Execution is Everything!!!
+You know, Ideas are Cheap, Execution is Everything!!! Keep Remember!
