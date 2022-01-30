@@ -1,4 +1,5 @@
 # Personal-Website-TechLead.io
+It's my portfolio and personal site for Google and other top tech companies !
 It's my portfolio website which showcase my previous works and projects !
 
 Remember that This Website is my portfolio/personal website. Which means that it will contain some Software Engineering projects. !
