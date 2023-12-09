@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-primary: sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  height: 100vh;
+  background: linear-gradient(30deg, #e0486e, #ef4758);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  background: gray;
+  display: inline-block;
+  opacity: 0;
+}
+
+.dots {
+    display: none;
+}
+
+.main-box {
+  width: 753px;
+  text-align: center;
+}
+
+.two-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.user-option {
+  background: #282828;
+  width: 279px;
+  border-radius: 11%;
+  height: 224px;
+  box-shadow: 0px 2px 8px 4px #00000080;
+}
+
+.image-user > img {
+  width: 72px;
+}
+
+h2.user-text {
+  background: #09090c;
+  color: #fff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 6px 0px;
+}
+
+.image-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 56px;
+}
+
+h1 {
+  color: #000;
+  font-size: 39px;
+  margin-bottom: 46px;
+  font-weight: 800;
+}
+
+.user-heading {
+    text-transform: uppercase;
+}
+
+.gm-button {
+  background: #282828;
+  border-radius: 50%;
+  border: none;
+  padding: 20px;
+  box-shadow: 0px 2px 8px 4px #00000080;
+  margin: 0 31px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+.gm-button:hover {
+    transform: scale(1.35);
+}
+
+button.gm-button > img {
+  width: 67px;
+}
+
+.game-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
