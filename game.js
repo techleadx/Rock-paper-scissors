@@ -1,21 +1,19 @@
 
-// window.onload = function() {doThat();};
 
 let UserBoxImage = document.querySelector('.user-pick');
 let ComputerBoxImage = document.querySelector('.computer-pick');
 let Dots = document.querySelector('.dots');
 let ComputerTurn = ComputerChoice();
-
 let GameResult = document.querySelector('.user-heading');
 
 
-
 function Game(UserChoice) {
+    GameResult.innerHTML = 'Playing...';
     let UserTurn = UserChoice;
     SetUserImage(UserChoice);
     DoAnimation();
     setTimeout(function(){PlayGame(ComputerTurn, UserTurn);}, 3000);
-    
+    i++;
 }
 
 function SetUserImage(ImageName) {
@@ -45,6 +43,7 @@ function SetComputerImage(ImageName) {
 
 function ContinueComputer() {
     Dots.style.display = 'none';
+    setAnima();
     SetComputerImage(ComputerTurn);
 }
 
@@ -71,6 +70,13 @@ function AnimateDots() {
             clearInterval(id);
         }
     }
+}
+
+function setAnima() {
+    let x = document.getElementsByClassName('sp');
+    x[0].style.opacity = '0';
+    x[1].style.opacity = '0';
+    x[2].style.opacity = '0';
 }
 
 function ComputerChoice() {
@@ -103,3 +109,10 @@ function PlayGame(ComputerTurn, UserTurn) {
         GameResult.innerHTML = 'Computer Won!🤖';
     }
 }
+
+// function GameReset() {
+//     UserBoxImage.src = './img/question-mark.png';
+//     ComputerBoxImage.src = './img/question-mark.png';
+// }
+
+
