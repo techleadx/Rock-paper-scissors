@@ -1,19 +1,18 @@
-
-
 let UserBoxImage = document.querySelector('.user-pick');
 let ComputerBoxImage = document.querySelector('.computer-pick');
 let Dots = document.querySelector('.dots');
-let ComputerTurn = ComputerChoice();
+let ComputerImageGlobal = null;
 let GameResult = document.querySelector('.user-heading');
 
 
 function Game(UserChoice) {
     GameResult.innerHTML = 'Playing...';
     let UserTurn = UserChoice;
+    console.log("user choice: ", UserTurn);
+    let ComputerTurn = ComputerChoice();
     SetUserImage(UserChoice);
     DoAnimation();
     setTimeout(function(){PlayGame(ComputerTurn, UserTurn);}, 3000);
-    i++;
 }
 
 function SetUserImage(ImageName) {
@@ -24,6 +23,12 @@ function SetUserImage(ImageName) {
     }else {
         UserBoxImage.src = './img/scissor.png';
     }
+}
+
+function ContinueComputer() {
+    Dots.style.display = 'none';
+    setAnima();
+    SetComputerImage(ComputerImageGlobal);
 }
 
 function SetComputerImage(ImageName) {
@@ -39,12 +44,6 @@ function SetComputerImage(ImageName) {
         ComputerBoxImage.style.display = 'block';
         ComputerBoxImage.src = './img/scissor.png';
     }
-}
-
-function ContinueComputer() {
-    Dots.style.display = 'none';
-    setAnima();
-    SetComputerImage(ComputerTurn);
 }
 
 function DoAnimation() {
@@ -80,16 +79,18 @@ function setAnima() {
 }
 
 function ComputerChoice() {
-    let ComputerChoice = null;
+    let ComputerChoiceVar = null;
     let RandomNumber = Math.floor(Math.random() * 31);
     if(RandomNumber >= 0 && RandomNumber <= 10) {
-        ComputerChoice = 'rock';
+        ComputerChoiceVar = 'rock';
     }else if(RandomNumber >= 11 && RandomNumber <= 20) {
-        ComputerChoice = 'paper';
+        ComputerChoiceVar = 'paper';
     }else if(RandomNumber >= 21 && RandomNumber <= 31) {
-        ComputerChoice = 'scissor';
+        ComputerChoiceVar = 'scissor';
     }
-    return ComputerChoice;
+    ComputerImageGlobal = ComputerChoiceVar;
+    console.log("Computer: ", ComputerChoiceVar, RandomNumber);
+    return ComputerChoiceVar;
 }
 
 function PlayGame(ComputerTurn, UserTurn) {
@@ -109,6 +110,7 @@ function PlayGame(ComputerTurn, UserTurn) {
         GameResult.innerHTML = 'Computer Won!🤖';
     }
 }
+
 
 // function GameReset() {
 //     UserBoxImage.src = './img/question-mark.png';
