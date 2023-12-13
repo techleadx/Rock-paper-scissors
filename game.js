@@ -8,7 +8,6 @@ let GameResult = document.querySelector('.user-heading');
 function Game(UserChoice) {
     GameResult.innerHTML = 'Playing...';
     let UserTurn = UserChoice;
-    console.log("user choice: ", UserTurn);
     let ComputerTurn = ComputerChoice();
     SetUserImage(UserChoice);
     DoAnimation();
@@ -39,7 +38,6 @@ function SetComputerImage(ImageName) {
     }else if(ImageName == 'paper') {
         ComputerBoxImage.style.display = 'block';
         ComputerBoxImage.src = './img/paper.png';
-
     }else {
         ComputerBoxImage.style.display = 'block';
         ComputerBoxImage.src = './img/scissor.png';
@@ -89,7 +87,6 @@ function ComputerChoice() {
         ComputerChoiceVar = 'scissor';
     }
     ComputerImageGlobal = ComputerChoiceVar;
-    console.log("Computer: ", ComputerChoiceVar, RandomNumber);
     return ComputerChoiceVar;
 }
 
@@ -110,9 +107,3 @@ function PlayGame(ComputerTurn, UserTurn) {
         GameResult.innerHTML = 'Computer Won!🤖';
     }
 }
-
-
-// function GameReset() {
-//     UserBoxImage.src = './img/question-mark.png';
-//     ComputerBoxImage.src = './img/question-mark.png';
-// }
